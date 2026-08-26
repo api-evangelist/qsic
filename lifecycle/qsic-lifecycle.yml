@@ -1,0 +1,60 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  https://status.getqsic.com/ plus a search of www.getqsic.com for versioning, deprecation, SLA and
+  changelog pages, 2026-08-26.
+provider: Qsic
+status_page:
+  present: true
+  url: https://status.getqsic.com/
+  http_status: 200
+  platform: Datadog Status Pages
+  platform_evidence: >-
+    The page bundle (/src/status-pages-site-*.min.js) is Datadog's status-pages-site app — it
+    references sourcemaps.static-app.us1.prod.dog/status-pages-site/ and
+    demo-status-page.statuspage.datadoghq.com.
+  machine_readable: false
+  machine_readable_note: >-
+    The page is a client-rendered SPA served from an S3/Fastly origin; the served HTML contains only
+    the title "Status Pages Site". The Atlassian-style JSON endpoints an agent would poll
+    (/api/v2/summary.json, /index.json) return HTTP 403 AccessDenied from the S3 origin, so current
+    component state and incident history are not retrievable without executing JavaScript.
+  fetched: '2026-08-26'
+versioning:
+  policy_published: false
+  scheme: unknown
+  note: >-
+    No public versioning policy. Qsic publishes no developer portal or API reference, so there is no
+    stated version scheme for the api.getqsic.com surface.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  rfc8594: unknown
+  note: >-
+    No deprecation or sunset policy is published. Not asserted either way for the API host, which was
+    only reached anonymously and returned 404/200 health responses.
+sla:
+  published: false
+  note: >-
+    No public SLA. Commercial terms are covered by https://www.getqsic.com/terms-conditions and
+    https://www.getqsic.com/usa-service-terms, which are contract terms rather than an availability
+    commitment expressed as a target percentage.
+changelog:
+  published: false
+  note: >-
+    No dated product or API changelog found. Product news is published as marketing posts under
+    https://www.getqsic.com/blog and https://www.getqsic.com/news/, which are announcements rather
+    than a versioned change record.
+deprecated_operations: []
+probes:
+- url: https://status.getqsic.com/
+  status: 200
+- url: https://status.getqsic.com/api/v2/summary.json
+  status: 403
+- url: https://status.getqsic.com/index.json
+  status: 403
+- url: https://www.getqsic.com/docs
+  status: 404
+- url: https://www.getqsic.com/developers
+  status: 404

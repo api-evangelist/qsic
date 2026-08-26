@@ -1,0 +1,82 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct unauthenticated HTTPS probes of /.well-known/* on every Qsic host discovered in this pass
+  (marketing site, API host, status page, trust center), 2026-08-26.
+provider: Qsic
+note: >-
+  No /.well-known document is served on any Qsic host. The marketing site (Webflow) answers every
+  /.well-known/* path with a 404 HTML stub reading "Invalid .well-known request"; the API host
+  answers with its own JSON 404 envelope; the status page is an S3-backed static site that answers
+  403 AccessDenied; and the Vanta-hosted trust center is a single-page app that answers 200 with the
+  SAME 5,435-byte HTML shell for EVERY path, which is a catch-all, not a document. Per the pipeline
+  contract that 200 is recorded as a miss and no WellKnown, SecurityTxt or AgentCard pointer is
+  emitted from this file.
+hosts:
+- host: www.getqsic.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.getqsic.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: status.getqsic.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+- host: trust.getqsic.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: >-
+      NOT a document — Vanta single-page-app catch-all returning the same HTML shell served at the
+      host root. Recorded as a miss.
+  - path: /.well-known/api-catalog
+    status: 200
+    note: SPA catch-all HTML shell, not an api-catalog document. Recorded as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: SPA catch-all HTML shell, not an AgentCard. Rejected per pipeline contract.
+  - path: /.well-known/agent.json
+    status: 200
+    note: SPA catch-all HTML shell, not an AgentCard. Rejected per pipeline contract.
+summary:
+  hosts_probed: 4
+  paths_probed: 26
+  documents_found: 0
+  security_txt: false
+  api_catalog: false
+  agent_card: false

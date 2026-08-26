@@ -1,0 +1,25 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Search of www.getqsic.com for any developer/API documentation (none exists), plus anonymous
+  response-header inspection of https://api.getqsic.com/, 2026-08-26.
+provider: Qsic
+limit_count: 0
+rate_limits: []
+headers: []
+status_code_on_exhaustion: unknown
+note: >-
+  No rate limits are documented anywhere, because Qsic publishes no developer documentation at all —
+  /developers, /docs and /api on the marketing site all return 404 and no docs host resolves. The
+  live API host api.getqsic.com answers anonymous requests with a structured JSON error envelope
+  ({"error":{"code":"not_found","message":"...","request_id":"..."}}) and a 200 {"status":"ok"} at
+  /health, but returned no X-RateLimit-*, RateLimit-* or Retry-After headers on those anonymous
+  responses, and no authenticated request was made. An honest zero: limits may well exist behind
+  authentication, but none are published and none were observed.
+probes:
+- url: https://api.getqsic.com/health
+  status: 200
+- url: https://api.getqsic.com/
+  status: 404
+- url: https://www.getqsic.com/developers
+  status: 404

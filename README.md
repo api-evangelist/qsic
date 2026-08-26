@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Qsic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Qsic (styled QSIC) is an Australian-founded, AI-driven in-store audio and retail media platform, headquartered in Melbourne with a North American office in Dallas, Texas. It blends curated music, targeted audio advertising and store-level intelligence over a retailer's existing speaker infrastructure or premium smart speakers, turning physical stores into measurable retail media networks.
+
+**No public API.** As of 2026-08-26 Qsic publishes no developer portal, API reference, OpenAPI/AsyncAPI/GraphQL/Protobuf/WSDL contract, SDK, MCP server or A2A agent card. A live JSON API host exists at `api.getqsic.com`, but it is the product's own undocumented backend. See `x-coverage` in `apis.yml` for the probe record.
+
+- Website: https://www.getqsic.com/
+- Status page: https://status.getqsic.com/
+- Trust center: https://trust.getqsic.com/
+- GitHub organization: https://github.com/getqsic

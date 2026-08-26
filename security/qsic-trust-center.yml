@@ -1,0 +1,41 @@
+generated: '2026-08-26'
+method: probed
+source: https://trust.getqsic.com/
+provider: Qsic
+trust_center:
+  present: true
+  url: https://trust.getqsic.com/
+  title: QSIC Trust Center
+  platform: Vanta
+  platform_evidence: >-
+    Page is served from Vanta's trust-report bundle (assets.vanta.com/static/index-trust-report-*.js)
+    and carries data-slugid "ea9fogyexwba0chwxwskxx"; the tenant's Vanta region is app.aus.vanta.com
+    (Australia), consistent with Qsic being an Australian-headquartered company.
+  http_status: 200
+  content_type: text/html
+  fetched: '2026-08-26'
+certifications: []
+certifications_readable: false
+certifications_note: >-
+  The trust center EXISTS and is publicly reachable, but its contents are not machine-readable. The
+  served HTML is a 5,435-byte single-page-app shell whose only text is the title "QSIC Trust Center";
+  every framework, control and document is fetched client-side from Vanta's GraphQL API, which
+  rejects anonymous requests with {"code":"BAD_REQUEST","message":"Missing `signature` or
+  `signedAt`"}. No certification (SOC 2, ISO 27001, PCI, HIPAA, FedRAMP, GDPR) could therefore be
+  read or verified, and NO `Compliance` pointer is emitted from this file — asserting certifications
+  we could not read would be fabrication.
+probes:
+- url: https://trust.getqsic.com/
+  status: 200
+  note: Vanta trust center SPA shell.
+- url: https://app.aus.vanta.com/graphql
+  status: 400
+  note: 'Anonymous GraphQL rejected: Missing `signature` or `signedAt`.'
+- url: https://api.vanta.com/v1/trust-centers/ea9fogyexwba0chwxwskxx
+  status: 401
+  note: Unauthorized.
+remediation_for_provider: >-
+  Vanta trust centers can be configured to expose a public, crawlable summary of frameworks and
+  certifications. Serving the framework list as static HTML (or publishing a /.well-known/security.txt
+  that points at the trust center) would make the compliance posture readable to buyers, crawlers and
+  agents rather than to browsers only.

@@ -1,0 +1,29 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://www.getqsic.com/ and its full link graph (contact, faqs, retail-media, solutions/*,
+  turnkey-audio), probed 2026-08-26. https://www.getqsic.com/pricing returns HTTP 404.
+provider: Qsic
+plan_count: 0
+plans: []
+note: >-
+  Qsic publishes no pricing page and no plan tiers. There is no /pricing route (404), no pricing
+  section in the site navigation, and no self-serve sign-up or login route (/login and /sign-in both
+  404). The go-to-market is enterprise and quotation-based: the site funnels to a contact form at
+  https://www.getqsic.com/contact, to hi@getqsic.com and to phone numbers in Australia
+  (+61 1300 113 279) and the United States (+1 888 239 5602). The retail-media page describes
+  commercial capabilities per package (store-level performance reporting, demand-side platform
+  integration, direct ad sales, retail media go-to-market strategy) but attaches no prices,
+  currencies, billing periods or quotas to them, so nothing can be recorded as a tier without
+  inventing it.
+pricing_model: contact-sales
+self_serve_signup: false
+probes:
+- url: https://www.getqsic.com/pricing
+  status: 404
+- url: https://www.getqsic.com/login
+  status: 404
+- url: https://www.getqsic.com/sign-in
+  status: 404
+- url: https://www.getqsic.com/contact
+  status: 200

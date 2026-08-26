@@ -1,17 +1,35 @@
 aid: qsic
 name: Qsic
-description: 'Qsic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Qsic (styled QSIC) is an Australian-founded, AI-driven in-store audio and retail media platform,
+  headquartered in Melbourne with a North American office in Dallas, Texas. The platform blends
+  curated music, targeted audio advertising and store-level intelligence, deploying either over a
+  retailer's existing speaker infrastructure or over premium smart speakers, and adapting playback
+  to ambient conditions, dayparts and shopper behaviour. Qsic sells three connected products —
+  In-Store Audio, Ads and Intelligence — and positions the combination as a way to turn physical
+  stores into measurable retail media networks with store-level performance reporting and
+  demand-side platform integration. Publicly reported deployments include 7-Eleven ("Gulp Radio"),
+  Dollar General, Coles Liquor and Mecca. Qsic runs a live JSON API host at api.getqsic.com and a
+  Vanta-hosted trust center, but publishes no public developer portal, API reference or
+  machine-readable specification as of this profile.
 url: https://raw.githubusercontent.com/api-evangelist/qsic/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/67dd6fe7bd7e331b5970b9a2/67e163850b12009683e71450_Webclip.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Retail Media
+- In-Store Audio
+- Advertising
+- Audio
+- Retail
+- Music
+- Media
+- Marketing
+- Advertising Technology
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,61 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/qsic-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.getqsic.com/
+- type: About
+  url: https://www.getqsic.com/about-us
+- type: Blog
+  url: https://www.getqsic.com/blog
+- type: Support
+  url: https://www.getqsic.com/contact
+- type: HelpCenter
+  url: https://www.getqsic.com/faqs
+- type: TermsOfService
+  url: https://www.getqsic.com/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.getqsic.com/privacy-policy-26
+- type: GitHubOrganization
+  url: https://github.com/getqsic
+- type: StatusPage
+  url: https://status.getqsic.com/
+- type: TrustCenter
+  url: https://trust.getqsic.com/
+- type: Lifecycle
+  url: lifecycle/qsic-lifecycle.yml
+- type: LLMsTxt
+  url: llms/qsic-llms.txt
+- type: Plans
+  url: plans/qsic-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/qsic-rate-limits.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Qsic sells a managed in-store audio and retail media service, not a developer product: the
+    Webflow marketing site has no developer, docs or API route (/developers, /docs and /api all 404),
+    no docs or developer subdomain resolves, and the one live API host, api.getqsic.com, is the
+    product's own undocumented backend that answers anonymous requests with a bare JSON error
+    envelope.
+  evidence:
+    - url: https://www.getqsic.com/developers
+      status: 404
+    - url: https://www.getqsic.com/docs
+      status: 404
+    - url: https://api.getqsic.com/openapi.json
+      status: 404
+    - url: https://api.getqsic.com/health
+      status: 200
+    - url: https://www.getqsic.com/llms.txt
+      status: 404
+    - url: https://www.getqsic.com/.well-known/agent-card.json
+      status: 404
+  checked: '2026-08-26'

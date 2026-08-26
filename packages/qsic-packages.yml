@@ -1,0 +1,32 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Registry searches on registry.npmjs.org, pypi.org, rubygems.org and crates.io for "qsic"/"getqsic",
+  plus the GitHub organization https://github.com/getqsic, 2026-08-26.
+provider: Qsic
+package_count: 0
+packages: []
+note: >-
+  No first-party Qsic client library exists in any public package registry. npm search for "qsic"
+  returned zero results, https://pypi.org/pypi/qsic/json returned 404, the RubyGems search returned
+  an empty array and the crates.io search returned total 0. The company's GitHub organization
+  (https://github.com/getqsic — name "Qsic", blog https://www.getqsic.com/, email hello@getqsic.com,
+  created 2020-04-15) is real and confirmed as Qsic's, but publishes 0 public repositories. No
+  CDN-distributed component or script tag was found on the marketing site either. No `SDKs` or
+  `Packages` pointer is emitted, because a pointer to an empty list would read as a presence.
+registries_checked:
+- registry: npm
+  query: qsic
+  results: 0
+- registry: pypi
+  query: qsic
+  status: 404
+- registry: rubygems
+  query: qsic
+  results: 0
+- registry: crates.io
+  query: qsic
+  results: 0
+- registry: github
+  org: getqsic
+  public_repos: 0
