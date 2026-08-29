@@ -13,6 +13,17 @@ description: >-
   Vanta-hosted trust center, but publishes no public developer portal, API reference or
   machine-readable specification as of this profile.
 url: https://raw.githubusercontent.com/api-evangelist/qsic/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/67dd6fe7bd7e331b5970b9a2/67e163850b12009683e71450_Webclip.png
 x-type: company
 x-source: harvest:secondary-market
