@@ -64,11 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Qsic (styled QSIC) is an Australian-founded, AI-driven in-store audio and retail media platform, headquartered in Melbourne with a North American office in Dallas, Texas. It blends curated music, targeted audio advertising and store-level intelligence over a retailer's existing speaker infrastructure or premium smart speakers, turning physical stores into measurable retail media networks.
+Qsic (styled QSIC) is an Australian-founded, AI-driven in-store audio and retail media platform, headquartered in Melbourne with a North American office in Dallas, Texas. The platform blends curated music, targeted audio advertising and store-level intelligence, deploying either over a retailer's existing speaker infrastructure or over premium smart speakers, and adapting playback to ambient conditions, dayparts and shopper behaviour. Qsic sells three connected products — In-Store Audio, Ads and Intelligence — and positions the combination as a way to turn physical stores into measurable retail media networks with store-level performance reporting and demand-side platform integration. Publicly reported deployments include 7-Eleven ("Gulp Radio"), Dollar General, Coles Liquor and Mecca. Qsic runs a live JSON API host at api.getqsic.com and a Vanta-hosted trust center, but publishes no public developer portal, API reference or machine-readable specification as of this profile.
 
-**No public API.** As of 2026-08-26 Qsic publishes no developer portal, API reference, OpenAPI/AsyncAPI/GraphQL/Protobuf/WSDL contract, SDK, MCP server or A2A agent card. A live JSON API host exists at `api.getqsic.com`, but it is the product's own undocumented backend. See `x-coverage` in `apis.yml` for the probe record.
+**Areas:** Company · Retail Media · In-Store Audio · Advertising · Audio · Retail · Music · Media · Marketing · AdTech
 
-- Website: https://www.getqsic.com/
-- Status page: https://status.getqsic.com/
-- Trust center: https://trust.getqsic.com/
-- GitHub organization: https://github.com/getqsic
+## Qsic on APIs.io
+
+Everything profiled for Qsic is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/qsic/](https://apis.io/providers/qsic/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Qsic Domain Security](https://apis.io/security/qsic/qsic-domain-security/)
+- [Qsic Trust Center](https://apis.io/security/qsic/qsic-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Qsic Plans Pricing](https://apis.io/plans/qsic/qsic-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Qsic Rate Limits](https://apis.io/rate-limits/qsic/qsic-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.getqsic.com/)
+- [Support](https://www.getqsic.com/contact)
+- [Blog](https://www.getqsic.com/blog)
+- [Trust centre](https://trust.getqsic.com/)
+- [Terms of service](https://www.getqsic.com/terms-conditions)
+- [Privacy policy](https://www.getqsic.com/privacy-policy-26)
+- [GitHub](https://github.com/getqsic)
+- [Status](https://status.getqsic.com/)
+
+## API Evangelist rating
+
+**Kin Score 11.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/qsic/](https://apis.io/providers/qsic/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Qsic: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/qsic/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
